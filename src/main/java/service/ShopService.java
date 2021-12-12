@@ -37,7 +37,7 @@ public class ShopService {
 
     public void removeProduct(String idOfProductToRemove){
         try {
-            System.out.println(myProductRepo.removeProductById(idOfProductToRemove));
+            System.out.println("Produkt wurde entfernt: " + myProductRepo.removeProductById(idOfProductToRemove));
         } catch (IllegalArgumentException e){
             System.out.println(e.getMessage());
         }

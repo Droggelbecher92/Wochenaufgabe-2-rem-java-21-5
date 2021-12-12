@@ -44,6 +44,6 @@ public class Product {
     @Override
     public String toString() {
         return "Artikel: " + name +
-                "ArtNr='" + id ;
+                " => Artikelnummer=" + id ;
     }
 }
