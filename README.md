@@ -22,5 +22,4 @@ Implementiere das Bestellsystem (natürlich mit Tests!).
 ##Bonus
 
 - Nutze für die get Methoden ein Optional
-- Nutze anstelle einer Product Klasse ein Interface und implementiere verschiedene Ausführungen
 - Nutze UUID für generierte und einzigartige ID´s.
