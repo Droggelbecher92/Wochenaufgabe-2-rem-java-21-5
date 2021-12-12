@@ -3,6 +3,7 @@ package repo;
 import model.Order;
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -54,7 +55,7 @@ class OrderRepoTest {
     public void addOrderWithNewID(){
         //Given
         OrderRepo testRepo = setup();
-        Order orderToAdd = new Order("5",new HashMap<>());
+        Order orderToAdd = new Order("5",new ArrayList<>());
         //When
         Order actual = testRepo.addNewOrder(orderToAdd);
         //Then
@@ -66,7 +67,7 @@ class OrderRepoTest {
     public void addOrderWithExistingIdShouldTrow(){
         //Given
         OrderRepo testRepo = setup();
-        Order orderToAdd = new Order("3",new HashMap<>());
+        Order orderToAdd = new Order("3",new ArrayList<>());
         //When
         try {
             testRepo.addNewOrder(orderToAdd);
@@ -79,10 +80,10 @@ class OrderRepoTest {
 
     //Hilfsfunktionen
     public OrderRepo setup(){
-        Order order1 = new Order("1",new HashMap<>());
-        Order order2 = new Order("2",new HashMap<>());
-        Order order3 = new Order("3",new HashMap<>());
-        Order order4 = new Order("4",new HashMap<>());
+        Order order1 = new Order("1",new ArrayList<>());
+        Order order2 = new Order("2",new ArrayList<>());
+        Order order3 = new Order("3",new ArrayList<>());
+        Order order4 = new Order("4",new ArrayList<>());
         return new OrderRepo(new HashMap<>(Map.of(
                 order1.getId(),order1,
                 order2.getId(),order2,

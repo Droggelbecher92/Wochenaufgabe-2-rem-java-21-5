@@ -1,14 +1,15 @@
 package model;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Objects;
 
 public class Order {
 
     private String id;
-    private HashMap<String,Product> orderedProducts;
+    private ArrayList<String> orderedProducts;
 
-    public Order(String id, HashMap<String, Product> orderedProducts) {
+    public Order(String id, ArrayList<String> orderedProducts) {
         this.id = id;
         this.orderedProducts = orderedProducts;
     }
@@ -21,11 +22,11 @@ public class Order {
         this.id = id;
     }
 
-    public HashMap<String, Product> getOrderedProducts() {
+    public ArrayList<String> getOrderedProducts() {
         return orderedProducts;
     }
 
-    public void setOrderedProducts(HashMap<String, Product> orderedProducts) {
+    public void setOrderedProducts(ArrayList<String> producIds) {
         this.orderedProducts = orderedProducts;
     }
 
